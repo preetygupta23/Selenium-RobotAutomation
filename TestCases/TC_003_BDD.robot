@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../Resources/Resource2.robot
-
+Resource    ../Resources/Resource2.robot
 *** Variables ***
 
 

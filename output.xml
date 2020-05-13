@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200511 15:33:56.122" rpa="false">
-<suite id="s1" name="TC 002" source="C:\Users\Preety\PycharmProjects\RobotAutomation\TestCases\TC_002.robot">
-<test id="s1-t1" name="TC_002 Facebook login">
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200513 16:42:36.920" rpa="false">
+<suite id="s1" name="TestCases" source="C:\Users\Preety\PycharmProjects\RobotAutomation\TestCases">
+<suite id="s1-s1" name="TC 001" source="C:\Users\Preety\PycharmProjects\RobotAutomation\TestCases\TC_001.robot">
+<test id="s1-s1-t1" name="TC_001 Browser Strat and Close">
+<kw name="Start Browser" library="Resource1">
+<doc>This is to open a browser</doc>
+<arguments>
+<arg>http://www.thetestingworld.com/testings</arg>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${UserURL}</arg>
+<arg>${InputBrowser}</arg>
+</arguments>
+<msg timestamp="20200513 16:42:37.185" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<status status="PASS" starttime="20200513 16:42:37.185" endtime="20200513 16:42:42.804"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200513 16:42:42.805" endtime="20200513 16:42:44.952"></status>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20200513 16:42:44.960" level="INFO">${Title} = Account Suspended</msg>
+<status status="PASS" starttime="20200513 16:42:44.952" endtime="20200513 16:42:44.960"></status>
+</kw>
+<status status="PASS" starttime="20200513 16:42:37.185" endtime="20200513 16:42:44.961"></status>
+</kw>
+<doc>This is to open and fill details</doc>
+<tags>
+<tag>Sanity</tag>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200513 16:42:37.184" endtime="20200513 16:42:44.961" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="TC_001 User Form">
+<kw name="Enter User name">
+<arguments>
+<arg>Preety Gupta</arg>
+<arg>preetygupta23@gmail.com</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:fld_username</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20200513 16:42:44.967" level="INFO">Typing text 'Preety Gupta' into text field 'name:fld_username'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200513 16:42:45.476" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200513 16:42:44.982" endtime="20200513 16:42:45.476"></status>
+</kw>
+<msg timestamp="20200513 16:42:45.480" level="FAIL">Element with locator 'name:fld_username' not found.</msg>
+<status status="FAIL" starttime="20200513 16:42:44.966" endtime="20200513 16:42:45.480"></status>
+</kw>
+<status status="FAIL" starttime="20200513 16:42:44.965" endtime="20200513 16:42:45.481"></status>
+</kw>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" starttime="20200513 16:42:44.965" endtime="20200513 16:42:45.481" critical="yes">Element with locator 'name:fld_username' not found.</status>
+</test>
+<doc>This is on testing world site.</doc>
+<status status="FAIL" starttime="20200513 16:42:36.952" endtime="20200513 16:42:45.486"></status>
+</suite>
+<suite id="s1-s2" name="TC 002" source="C:\Users\Preety\PycharmProjects\RobotAutomation\TestCases\TC_002.robot">
+<test id="s1-s2-t1" name="TC_002 Facebook login">
 <kw name="Start Browser Window" library="Resource2" type="setup">
 <doc>This is to open a browser</doc>
 <arguments>
@@ -14,65 +84,22 @@
 <arg>${UserURL}</arg>
 <arg>${InputBrowser}</arg>
 </arguments>
-<msg timestamp="20200511 15:33:56.390" level="INFO">Opening browser 'Firefox' to base url 'http://www.facebook.com'.</msg>
-<msg timestamp="20200511 15:33:56.390" level="INFO">Firefox driver log is always forced to to: C:\Users\Preety\PycharmProjects\RobotAutomation\geckodriver-1.log</msg>
-<status status="PASS" starttime="20200511 15:33:56.390" endtime="20200511 15:34:08.204"></status>
+<msg timestamp="20200513 16:42:45.514" level="INFO">Opening browser 'Firefox' to base url 'http://www.facebook.com'.</msg>
+<msg timestamp="20200513 16:42:45.515" level="INFO">Firefox driver log is always forced to to: C:\Users\Preety\PycharmProjects\RobotAutomation\geckodriver-1.log</msg>
+<status status="PASS" starttime="20200513 16:42:45.513" endtime="20200513 16:43:02.277"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200511 15:34:08.204" endtime="20200511 15:34:08.485"></status>
+<status status="PASS" starttime="20200513 16:43:02.277" endtime="20200513 16:43:02.546"></status>
 </kw>
-<status status="PASS" starttime="20200511 15:33:56.389" endtime="20200511 15:34:08.485"></status>
+<status status="PASS" starttime="20200513 16:42:45.512" endtime="20200513 16:43:02.547"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>name:email</arg>
-<arg>preetygupta23@gmail.com</arg>
-</arguments>
-<msg timestamp="20200511 15:34:08.487" level="INFO">Typing text 'preetygupta23@gmail.com' into text field 'name:email'.</msg>
-<status status="PASS" starttime="20200511 15:34:08.487" endtime="20200511 15:34:08.706"></status>
+<kw name="Create Folder at runtime" library="Resource2">
+<kw name="Create Folder" library="UserKeywords">
+<msg timestamp="20200513 16:43:02.552" level="FAIL">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C://PythonFolder'</msg>
+<status status="FAIL" starttime="20200513 16:43:02.549" endtime="20200513 16:43:02.552"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>name:pass</arg>
-<arg>swt@2311</arg>
-</arguments>
-<msg timestamp="20200511 15:34:08.707" level="INFO">Typing text 'swt@2311' into text field 'name:pass'.</msg>
-<status status="PASS" starttime="20200511 15:34:08.707" endtime="20200511 15:34:08.767"></status>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<doc>Returns the title of the current page.</doc>
-<assign>
-<var>${PageTitle}</var>
-</assign>
-<msg timestamp="20200511 15:34:08.771" level="INFO">${PageTitle} = Facebook – log in or sign up</msg>
-<status status="PASS" starttime="20200511 15:34:08.767" endtime="20200511 15:34:08.771"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${PageTitle}</arg>
-</arguments>
-<msg timestamp="20200511 15:34:08.772" level="INFO">Facebook – log in or sign up</msg>
-<status status="PASS" starttime="20200511 15:34:08.772" endtime="20200511 15:34:08.772"></status>
-</kw>
-<kw name="Get Selenium Speed" library="SeleniumLibrary">
-<doc>Gets the delay that is waited after each Selenium command.</doc>
-<assign>
-<var>${Speed}</var>
-</assign>
-<msg timestamp="20200511 15:34:08.773" level="INFO">${Speed} = 0 seconds</msg>
-<status status="PASS" starttime="20200511 15:34:08.773" endtime="20200511 15:34:08.773"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${Speed}</arg>
-</arguments>
-<msg timestamp="20200511 15:34:08.773" level="INFO">0 seconds</msg>
-<status status="PASS" starttime="20200511 15:34:08.773" endtime="20200511 15:34:08.773"></status>
+<status status="FAIL" starttime="20200513 16:43:02.548" endtime="20200513 16:43:02.552"></status>
 </kw>
 <kw name="close browser window" library="Resource2" type="teardown">
 <kw name="Get Title" library="SeleniumLibrary">
@@ -80,37 +107,78 @@
 <assign>
 <var>${Title}</var>
 </assign>
-<msg timestamp="20200511 15:34:08.780" level="INFO">${Title} = Facebook – log in or sign up</msg>
-<status status="PASS" starttime="20200511 15:34:08.773" endtime="20200511 15:34:08.780"></status>
+<msg timestamp="20200513 16:43:02.743" level="INFO">${Title} = Facebook – log in or sign up</msg>
+<status status="PASS" starttime="20200513 16:43:02.556" endtime="20200513 16:43:02.743"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${Title}</arg>
 </arguments>
-<msg timestamp="20200511 15:34:08.781" level="INFO">Facebook – log in or sign up</msg>
-<status status="PASS" starttime="20200511 15:34:08.780" endtime="20200511 15:34:08.781"></status>
+<msg timestamp="20200513 16:43:02.744" level="INFO">Facebook – log in or sign up</msg>
+<status status="PASS" starttime="20200513 16:43:02.743" endtime="20200513 16:43:02.744"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200511 15:34:08.781" endtime="20200511 15:34:15.429"></status>
+<status status="PASS" starttime="20200513 16:43:02.744" endtime="20200513 16:43:12.610"></status>
 </kw>
-<status status="PASS" starttime="20200511 15:34:08.773" endtime="20200511 15:34:15.429"></status>
+<status status="PASS" starttime="20200513 16:43:02.554" endtime="20200513 16:43:12.610"></status>
 </kw>
-<status status="PASS" starttime="20200511 15:33:56.388" endtime="20200511 15:34:15.430" critical="yes"></status>
+<status status="FAIL" starttime="20200513 16:42:45.509" endtime="20200513 16:43:12.610" critical="yes">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C://PythonFolder'</status>
 </test>
 <doc>This is on firefox.</doc>
-<status status="PASS" starttime="20200511 15:33:56.124" endtime="20200511 15:34:15.433"></status>
+<status status="FAIL" starttime="20200513 16:42:45.492" endtime="20200513 16:43:12.613"></status>
+</suite>
+<suite id="s1-s3" name="TC 003 BDD" source="C:\Users\Preety\PycharmProjects\RobotAutomation\TestCases\TC_003_BDD.robot">
+<test id="s1-s3-t1" name="Test Case in BDD format">
+<kw name="Given Start Browser Window" library="Resource2">
+<doc>This is to open a browser</doc>
+<arguments>
+<arg>http://www.thetestingworld.com/testings</arg>
+<arg>Chrome</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${UserURL}</arg>
+<arg>${InputBrowser}</arg>
+</arguments>
+<msg timestamp="20200513 16:43:12.624" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testings'.</msg>
+<status status="PASS" starttime="20200513 16:43:12.624" endtime="20200513 16:43:29.661"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200513 16:43:29.662" endtime="20200513 16:43:31.838"></status>
+</kw>
+<status status="PASS" starttime="20200513 16:43:12.624" endtime="20200513 16:43:31.838"></status>
+</kw>
+<kw name="When Create Folder at runtime" library="Resource2">
+<kw name="Create Folder" library="UserKeywords">
+<msg timestamp="20200513 16:43:31.840" level="FAIL">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C://PythonFolder'</msg>
+<status status="FAIL" starttime="20200513 16:43:31.839" endtime="20200513 16:43:31.840"></status>
+</kw>
+<status status="FAIL" starttime="20200513 16:43:31.839" endtime="20200513 16:43:31.842"></status>
+</kw>
+<status status="FAIL" starttime="20200513 16:43:12.623" endtime="20200513 16:43:31.842" critical="yes">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C://PythonFolder'</status>
+</test>
+<status status="FAIL" starttime="20200513 16:43:12.616" endtime="20200513 16:43:31.845"></status>
+</suite>
+<status status="FAIL" starttime="20200513 16:42:36.922" endtime="20200513 16:43:31.850"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="1" fail="3">Critical Tests</stat>
+<stat pass="1" fail="3">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="1">Sanity</stat>
+<stat pass="1" fail="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="TC 002">TC 002</stat>
+<stat pass="1" fail="3" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="1" id="s1-s1" name="TC 001">TestCases.TC 001</stat>
+<stat pass="0" fail="1" id="s1-s2" name="TC 002">TestCases.TC 002</stat>
+<stat pass="0" fail="1" id="s1-s3" name="TC 003 BDD">TestCases.TC 003 BDD</stat>
 </suite>
 </statistics>
 <errors>
