@@ -1,0 +1,3 @@
+pip install jsonpath
+pip install robotframewok
+pip install robotframework-seleniumLibrary
