@@ -11,7 +11,7 @@ TC_002 Facebook login
     [Setup]    Start Browser Window    http://www.facebook.com    Firefox
     [Teardown]    close browser window
     INPUT TEXT    name:email    preetygupta23@gmail.com
-    input text    name:pass    swt@2311
+    input text    name:pass    sweet@2311
     ${PageTitle}=    get title
     log    ${PageTitle}
     ${Speed}=    get selenium speed
